@@ -62,6 +62,6 @@ jobs:
         passphrase: ${{ secrets.PASSPHRASE }} # Если ваш ssh-ключ защищён фразой-паролем
         script: |
           sudo docker pull nekotenok/infra-actions
-          #остановка всех контейнеров
+          #остановка всех контейнеро
           sudo docker stop $(sudo docker ps -a -q)
           sudo docker run --rm -d -p 5000:5000 nekotenok/infra-actions
